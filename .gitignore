@@ -1,0 +1,13 @@
+.env
+node_modules
+dist
+
+graph.svg
+graph.png
+
+public/uploads/images/*/*.*
+!public/uploads/images/*/default.png
+
+.DS_Store
+src/.DS_Store
+tests/.DS_Store
