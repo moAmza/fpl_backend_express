@@ -1,6 +1,6 @@
 import express from "express";
-import { auth } from "../middleware/check-auth";
-import { modifyImage, upload } from "../middleware/uplaod-image";
+import { auth } from "../middlewares/check-auth";
+import { modifyImage, upload } from "../middlewares/uplaod-image";
 
 export const createUserRouter = (controller: UserControllerInterface) => {
   const router = express.Router();

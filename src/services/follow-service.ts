@@ -1,7 +1,6 @@
-import FollowDto from "../dto/follow-dto";
-import UserDto from "../dto/user-dto";
+import FollowDto from "../dtos/follow-dto";
+import UserDto from "../dtos/user-dto";
 import { DuplicateError } from "../errors/duplicate-error";
-import { HttpError } from "../errors/http-error";
 import { NotFoundError } from "../errors/not-found-error";
 
 class FollowService implements FollowServiceInterface {

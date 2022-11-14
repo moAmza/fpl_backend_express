@@ -1,5 +1,5 @@
 import { Op } from "sequelize";
-import PlayerDao from "../dao/player-dao";
+import PlayerDao from "../daos/player-dao";
 
 class PlayerRepository implements PlayerRepositoryInterface {
   constructor(private PlayerModel: PlayerModelType) {}
@@ -60,7 +60,6 @@ class PlayerRepository implements PlayerRepositoryInterface {
         order: [["id", "DESC"]],
       },
     });
-
 
     return { count: result.count, values: PlayerDao.convertMany(result.rows) };
   };

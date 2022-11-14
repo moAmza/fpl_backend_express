@@ -1,4 +1,4 @@
-import PlayerStatsDao from "../dao/player-stats-dao";
+import PlayerStatsDao from "../daos/player-stats-dao";
 
 class PlayerStatsRepository implements PlayerStatsRepositoryInterface {
   constructor(private PlayerStats: PlayerStatsModelType) {}

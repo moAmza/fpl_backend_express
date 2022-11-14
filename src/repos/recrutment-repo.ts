@@ -1,4 +1,4 @@
-import RecrutmentDao from "../dao/recrutment-dao";
+import RecrutmentDao from "../daos/recrutment-dao";
 
 class RecrutmentRepository implements RecrutmentRepositoryInterface {
   constructor(private RecrutmentModel: RecrutmentModelType) {}

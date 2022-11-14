@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { Sequelize } from "sequelize/types";
-import sequelizeConfig from "../../src/config/sequelize-config";
+import sequelizeConfig from "../../src/configs/sequelize-config";
 import Follow, { initFollowDB } from "../../src/models/follow";
 
 let server: Sequelize | undefined;

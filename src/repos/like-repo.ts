@@ -1,4 +1,4 @@
-import LikeDao from "../dao/like-dao";
+import LikeDao from "../daos/like-dao";
 
 class LikeRepository implements LikeRepositoryInterface {
   constructor(private LikeModel: LikeModelType) {}

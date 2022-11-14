@@ -1,6 +1,7 @@
 import * as redis from "redis";
 import ReplacementLog from "../models/replacement-log";
 import FollowRepository from "../repos/follow-repo";
+import { FplRepository } from "../repos/fpl-repo";
 import LikeRepository from "../repos/like-repo";
 import PlayerRepository from "../repos/player-repo";
 import PlayerStatsRepository from "../repos/player-stats-repo";
@@ -27,4 +28,5 @@ export const initRepositories = (deps: {
     deps.models.replacementLogModel
   ),
   likeRepo: new LikeRepository(deps.models.likeModel),
+  fplRepo: new FplRepository(),
 });

@@ -9,4 +9,5 @@ interface AllRepositories {
   followRepo: FollowRepositoryInterface;
   replacementLogRepo: ReplacementLogRepositoryInterface;
   likeRepo: LikeRepositoryInterface;
+  fplRepo: FplRepositoryInterface;
 }

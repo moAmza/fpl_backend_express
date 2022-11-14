@@ -1,5 +1,5 @@
 import express from "express";
-import { auth } from "../middleware/check-auth";
+import { auth } from "../middlewares/check-auth";
 
 export const createSocialRouter = (controller: SocialControllerInterface) => {
   const router = express.Router();

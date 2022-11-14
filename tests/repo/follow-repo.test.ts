@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { Sequelize } from "sequelize/types";
-import sequelizeConfig from "../../src/config/sequelize-config";
+import sequelizeConfig from "../../src/configs/sequelize-config";
 import Follow from "../../src/models/follow";
 import FollowRepository from "../../src/repos/follow-repo";
 import UserRepository from "../../src/repos/user-repo";

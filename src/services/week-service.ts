@@ -4,6 +4,12 @@ class WeekService implements WeekServiceInterface {
   getCurrentWeek = async () => {
     return this.weekRepo.getCurrentWeek();
   };
+
+  refreshWeeks = async (
+    freshWeeks: CreateWeekInputType[]
+  ): Promise<WeekOutputType[]> => {
+    return this.weekRepo.refreshWeeks(freshWeeks);
+  };
 }
 
 export default WeekService;

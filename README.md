@@ -1,6 +1,6 @@
 # backend express
 
-  <p >Football fantasy premier league sample project developed by <a href="http://nestjs.com/" target="_blank">nest.js</a>.</p>
+  <p >Football fantasy premier league sample project developed using express js.</p>
 <p align="center">
 
 </br>

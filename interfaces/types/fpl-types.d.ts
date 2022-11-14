@@ -1,4 +1,4 @@
-declare type freshDBInputType = {
+type FreshDBInputType = {
   weeks: CreateWeekInputType[];
   players: CreatePlayerInputType[];
 };

@@ -1,4 +1,4 @@
-import UserDao from "../dao/user-dao";
+import UserDao from "../daos/user-dao";
 import { Op } from "sequelize";
 
 class UserRepository implements UserRepositoryInterface {

@@ -1,4 +1,4 @@
-import TeamDao from "../dao/team-dao";
+import TeamDao from "../daos/team-dao";
 
 class TeamRepository implements TeamRepositoryInterface {
   constructor(private TeamModel: TeamModelType) {}

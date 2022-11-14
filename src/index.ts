@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
-import { configServer } from "./config/server-config";
-import { deployInfrastructure } from "./config/infrastructure-config";
-import { initDomain } from "./init/domain-init";
+import { configServer } from "./configs/server-config";
+import { deployInfrastructure } from "./configs/infrastructure-config";
+import { initDomain } from "./inits/domain-init";
 
 const run = async (envirenment: environment) => {
   dotenv.config();

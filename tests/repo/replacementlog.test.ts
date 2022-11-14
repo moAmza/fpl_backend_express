@@ -1,13 +1,13 @@
 import dotenv from "dotenv";
 import { Sequelize } from "sequelize/types";
-import sequelizeConfig from "../../src/config/sequelize-config";
+import sequelizeConfig from "../../src/configs/sequelize-config";
 import ReplacementLog from "../../src/models/replacement-log";
 import ReplacementLogRepository from "../../src/repos/replacement-log-repo";
 import WeekRepository from "../../src/repos/week-repo";
 import UserRepository from "../../src/repos/user-repo";
 import PlayerRepository from "../../src/repos/player-repo";
-import { initDomain } from "../../src/init/domain-init";
-import { deployInfrastructure } from "../../src/config/infrastructure-config";
+import { initDomain } from "../../src/inits/domain-init";
+import { deployInfrastructure } from "../../src/configs/infrastructure-config";
 
 let server: Sequelize | undefined;
 
@@ -17,7 +17,7 @@ let closeTestServer: Function;
 let replacementLogRepo: ReplacementLogRepositoryInterface;
 let weekRepo: WeekRepositoryInterface;
 let userRepo: UserRepositoryInterface;
-let refreshService: RefreshServiceInterface;
+let refreshService: FplServiceInterface;
 let teamService: TeamServiceInterface;
 let user: UserOutputType;
 

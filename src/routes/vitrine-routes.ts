@@ -1,5 +1,5 @@
 import express from "express";
-import { auth } from "../middleware/check-auth";
+import { auth } from "../middlewares/check-auth";
 
 export const createVitrineRouter = (controller: VitrineControllerInterface) => {
   const router = express.Router();

@@ -11,3 +11,7 @@ type PaginatedOutputType<T> = {
   values: T[];
   count: number;
 };
+
+type StatusOutputType<T extends boolean> = {
+  status: T;
+};

@@ -1,4 +1,4 @@
-import ReplacementDao from "../dao/replacementlog-dao";
+import ReplacementDao from "../daos/replacementlog-dao";
 
 class ReplacementLogRepository implements ReplacementLogRepositoryInterface {
   constructor(private replacementLogModel: ReplacementLogModelType) {}

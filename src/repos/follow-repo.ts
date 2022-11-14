@@ -1,4 +1,4 @@
-import FollowDao from "../dao/follow-dao";
+import FollowDao from "../daos/follow-dao";
 
 class FollowRepository implements FollowRepositoryInterface {
   constructor(private followModel: FollowModelType) {}

@@ -1,4 +1,4 @@
-import UserDto from "../dto/user-dto";
+import UserDto from "../dtos/user-dto";
 import { NotFoundError } from "../errors/not-found-error";
 
 class UserService implements UserServiceInterface {

@@ -1,3 +1,4 @@
+import PlayerDao from "../daos/player-dao";
 import { NotFoundError } from "../errors/not-found-error";
 
 class PlayerService implements PlayerServiceInterface {
@@ -5,6 +6,22 @@ class PlayerService implements PlayerServiceInterface {
     private playerRepo: PlayerRepositoryInterface,
     private playerStatsRepo: PlayerStatsRepositoryInterface
   ) {}
+
+  refreshPlayers = async (
+    freshPlayers: CreatePlayerInputType[]
+  ): Promise<PlayerOutputType[]> => {
+    let players = await this.playerRepo.bulkUpsertPlayer(freshPlayers);
+    let playerStats = await this.playerStatsRepo.bulkCreatePlayerStats(
+      players.map((x, index) => ({
+        ...freshPlayers[index].playerStats,
+        playerId: x.id,
+      }))
+    );
+
+    return players.map((p, i) =>
+      PlayerDao.mergePlayerAndStatsOutput(p, playerStats[i])
+    );
+  };
 
   getPaginatedPlayers = async ({
     page,

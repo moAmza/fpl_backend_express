@@ -6,4 +6,8 @@ interface PlayerServiceInterface {
   getPlayerById: (
     playerId: number
   ) => Promise<PlayerOutputType | NotFoundErrorType>;
+
+  refreshPlayers: (
+    freshPlayers: CreatePlayerInputType[]
+  ) => Promise<PlayerOutputType[]>;
 }
