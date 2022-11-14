@@ -2,8 +2,10 @@ import { CronJob } from "cron";
 
 class BatchComponent implements BatchComponentInterface {
   constructor(private fplService: FplServiceInterface) {}
-  schedule = () => {
-    this.configedCronJob(process.env.FPL_TIME!, this.fplService.updateFpl);
+
+  schedule = (envirenment: environment) => {
+    if (envirenment === "production")
+      this.configedCronJob(process.env.FPL_TIME!, this.fplService.updateFpl);
   };
 
   private configedCronJob = (time: string, func: Function) => {

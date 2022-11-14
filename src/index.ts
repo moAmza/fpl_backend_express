@@ -10,8 +10,8 @@ const run = async (envirenment: environment) => {
   const { routers, components } = initDomain(sequelize, redis);
   const app = configServer(routers);
 
-  app.listen();
-  components.batchComponent.schedule();
+  app.listen(envirenment);
+  components.batchComponent.schedule(envirenment);
 };
 
 run("production").catch((err) =>

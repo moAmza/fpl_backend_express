@@ -17,7 +17,7 @@ let closeTestServer: Function;
 let replacementLogRepo: ReplacementLogRepositoryInterface;
 let weekRepo: WeekRepositoryInterface;
 let userRepo: UserRepositoryInterface;
-let refreshService: FplServiceInterface;
+let playerService: PlayerServiceInterface;
 let teamService: TeamServiceInterface;
 let user: UserOutputType;
 
@@ -156,11 +156,11 @@ describe("Replacement Log Repo Test", () => {
     replacementLogRepo = repos.replacementLogRepo;
     weekRepo = repos.weekRepo;
     userRepo = repos.userRepo;
-    refreshService = services.refreshService;
+    playerService = services.playerService;
     teamService = services.teamService;
     await weekRepo.refreshWeeks(weeks);
     user = await userRepo.create(usersInfo[0]);
-    await refreshService.refreshPlayers(players);
+    await playerService.refreshPlayers(players);
     await teamService.getTeamByUserId(user.id);
     await teamService.addPlayer(user.id, players[0].id, players[0].positionNum);
     await teamService.addPlayer(user.id, players[1].id, players[1].positionNum);
@@ -227,7 +227,7 @@ describe("Replacement Log Repo Test", () => {
         team!.id,
         players[0].positionNum!
       );
-      console.log(records);
+
       expect(records).toStrictEqual([
         {
           weekId: currentWeek.id,

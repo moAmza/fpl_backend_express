@@ -1,3 +1,3 @@
 interface BatchComponentInterface {
-  schedule: () => void;
+  schedule: (envirenment: environment) => void;
 }
